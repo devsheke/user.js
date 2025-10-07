@@ -1,3 +1,7 @@
+// Resist fingerprinting
+user_pref("privacy.resistFingerprinting", true); // [FF41+]
+user_pref("privacy.resistFingerprinting.pbmode", true); // [FF114+]
+
 /****************************************************************************
  * Peskyfox                                                                 *
  * "Aquila non capit muscas"                                                *
@@ -272,6 +276,7 @@ user_pref("browser.urlbar.trending.featureGate", false);
 // [NOTE] Session Restore is cleared with history and not used in Private Browsing mode
 // [SETTING] General>Startup>Open previous windows and tabs
 //user_pref("browser.startup.page", 3);
+user_pref("browser.startup.page", 1);
 
 // PREF: set HOME+NEW WINDOW page to blank tab
 // about:home=Activity Stream, custom URL, about:blank
@@ -1270,19 +1275,20 @@ user_pref("dom.enable_web_task_scheduling", true);
  ***************************************************************************************/
 
 /****************************************************************************************
- * OPTION: INSTANT SCROLLING (SIMPLE ADJUSTMENT)                                       *
- ****************************************************************************************/
-// recommended for 60hz+ displays
+ * OPTION: NATURAL SMOOTH SCROLLING V3 [MODIFIED]                                      *
+****************************************************************************************/
+// credit: https://github.com/AveYo/fox/blob/cf56d1194f4e5958169f9cf335cd175daa48d349/Natural%20Smooth%20Scrolling%20for%20user.js
+// recommended for 120hz+ displays
+// largely matches Chrome flags: Windows Scrolling Personality and Smooth Scrolling
 user_pref("apz.overscroll.enabled", true); // DEFAULT NON-LINUX
 user_pref("general.smoothScroll", true); // DEFAULT
-user_pref("mousewheel.default.delta_multiplier_y", 275); // 250-400; adjust this number to your liking
-// Firefox Nightly only:
-// [1] https://bugzilla.mozilla.org/show_bug.cgi?id=1846935
-user_pref("general.smoothScroll.msdPhysics.enabled", false); // [FF122+ Nightly]
-
-/* override recipe: enable session restore ***/
-user_pref("browser.startup.page", 3); // 0102
-// user_pref("browser.privatebrowsing.autostart", false); // 0110 required if you had it set as true
-// user_pref("browser.sessionstore.privacy_level", 0); // 1003 optional to restore cookies/formdata
-user_pref("privacy.clearOnShutdown.history", false); // 2811 FF127 or lower
-user_pref("privacy.clearOnShutdown_v2.historyFormDataAndDownloads", false); // 2811 FF128+
+user_pref("general.smoothScroll.msdPhysics.continuousMotionMaxDeltaMS", 12);
+user_pref("general.smoothScroll.msdPhysics.enabled", true);
+user_pref("general.smoothScroll.msdPhysics.motionBeginSpringConstant", 600);
+user_pref("general.smoothScroll.msdPhysics.regularSpringConstant", 650);
+user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaMS", 25);
+user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaRatio", "2");
+user_pref("general.smoothScroll.msdPhysics.slowdownSpringConstant", 250);
+user_pref("general.smoothScroll.currentVelocityWeighting", "1");
+user_pref("general.smoothScroll.stopDecelerationWeighting", "1");
+user_pref("mousewheel.default.delta_multiplier_y", 265); // 250-400; adjust this number to your liking
