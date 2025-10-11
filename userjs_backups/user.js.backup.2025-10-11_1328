@@ -1276,13 +1276,6 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 user_pref("privacy.resistFingerprinting", false); // [FF41+]
 user_pref("privacy.resistFingerprinting.pbmode", false); // [FF114+]
 
-// Keep bookmarks hidden
-user_pref("browser.toolbars.bookmarks.visibility", "never");
-
-// Vertical sidebar
-user_pref("sidebar.verticalTabs", true);
-user_pref("sidebar.verticalTabs.dragToPinPromo.dismissed", true);
-
 /****************************************************************************
  * Peskyfox                                                                 *
  * "Aquila non capit muscas"                                                *
@@ -1500,8 +1493,6 @@ user_pref("browser.urlbar.trending.featureGate", false);
 //user_pref("browser.urlbar.weather.featureGate", false); // [FF108+] [DEFAULT: false]
 //user_pref("browser.urlbar.clipboard.featureGate", false); // [FF118+] [DEFAULT: true FF125+]
 //user_pref("browser.urlbar.yelp.featureGate", false); // [FF124+] [DEFAULT: false]
-user_pref("browser.search.suggest.enabled", true);
-user_pref("browser.urlbar.suggest.searches", true);
 
 // PREF: disable recent searches [FF120+]
 // [NOTE] Recent searches are cleared with history.
@@ -1567,7 +1558,6 @@ user_pref("browser.startup.page", 1);
 // [Custom URLs] Set two or more websites in Home Page Field – delimited by |
 // [1] https://support.mozilla.org/en-US/questions/1271888#answer-1262899
 //user_pref("browser.startup.homepage", "about:blank");
-user_pref("browser.startup.homepage", "moz-extension://0e55d502-cb00-4fc3-b66e-5f26a5fcaea6/index.html");
 
 // PREF: set NEWTAB page to blank tab
 // true=Firefox Home, false=blank page
@@ -2564,15 +2554,15 @@ user_pref("dom.enable_web_task_scheduling", true);
 // credit: https://github.com/AveYo/fox/blob/cf56d1194f4e5958169f9cf335cd175daa48d349/Natural%20Smooth%20Scrolling%20for%20user.js
 // recommended for 120hz+ displays
 // largely matches Chrome flags: Windows Scrolling Personality and Smooth Scrolling
-user_pref("apz.overscroll.enabled", true); // DEFAULT NON-LINUX
-user_pref("general.smoothScroll", true); // DEFAULT
-user_pref("general.smoothScroll.msdPhysics.continuousMotionMaxDeltaMS", 12);
-user_pref("general.smoothScroll.msdPhysics.enabled", true);
-user_pref("general.smoothScroll.msdPhysics.motionBeginSpringConstant", 600);
-user_pref("general.smoothScroll.msdPhysics.regularSpringConstant", 650);
-user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaMS", 25);
-user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaRatio", "2");
-user_pref("general.smoothScroll.msdPhysics.slowdownSpringConstant", 250);
-user_pref("general.smoothScroll.currentVelocityWeighting", "1");
-user_pref("general.smoothScroll.stopDecelerationWeighting", "1");
-user_pref("mousewheel.default.delta_multiplier_y", 250); // 250-400; adjust this number to your liking
+// user_pref("apz.overscroll.enabled", true); // DEFAULT NON-LINUX
+// user_pref("general.smoothScroll", true); // DEFAULT
+// user_pref("general.smoothScroll.msdPhysics.continuousMotionMaxDeltaMS", 12);
+// user_pref("general.smoothScroll.msdPhysics.enabled", true);
+// user_pref("general.smoothScroll.msdPhysics.motionBeginSpringConstant", 600);
+// user_pref("general.smoothScroll.msdPhysics.regularSpringConstant", 650);
+// user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaMS", 25);
+// user_pref("general.smoothScroll.msdPhysics.slowdownMinDeltaRatio", "2");
+// user_pref("general.smoothScroll.msdPhysics.slowdownSpringConstant", 250);
+// user_pref("general.smoothScroll.currentVelocityWeighting", "1");
+// user_pref("general.smoothScroll.stopDecelerationWeighting", "1");
+// user_pref("mousewheel.default.delta_multiplier_y", 265); // 250-400; adjust this number to your liking

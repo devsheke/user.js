@@ -1276,13 +1276,6 @@ user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!"
 user_pref("privacy.resistFingerprinting", false); // [FF41+]
 user_pref("privacy.resistFingerprinting.pbmode", false); // [FF114+]
 
-// Keep bookmarks hidden
-user_pref("browser.toolbars.bookmarks.visibility", "never");
-
-// Vertical sidebar
-user_pref("sidebar.verticalTabs", true);
-user_pref("sidebar.verticalTabs.dragToPinPromo.dismissed", true);
-
 /****************************************************************************
  * Peskyfox                                                                 *
  * "Aquila non capit muscas"                                                *
@@ -1500,8 +1493,6 @@ user_pref("browser.urlbar.trending.featureGate", false);
 //user_pref("browser.urlbar.weather.featureGate", false); // [FF108+] [DEFAULT: false]
 //user_pref("browser.urlbar.clipboard.featureGate", false); // [FF118+] [DEFAULT: true FF125+]
 //user_pref("browser.urlbar.yelp.featureGate", false); // [FF124+] [DEFAULT: false]
-user_pref("browser.search.suggest.enabled", true);
-user_pref("browser.urlbar.suggest.searches", true);
 
 // PREF: disable recent searches [FF120+]
 // [NOTE] Recent searches are cleared with history.
@@ -1567,7 +1558,6 @@ user_pref("browser.startup.page", 1);
 // [Custom URLs] Set two or more websites in Home Page Field – delimited by |
 // [1] https://support.mozilla.org/en-US/questions/1271888#answer-1262899
 //user_pref("browser.startup.homepage", "about:blank");
-user_pref("browser.startup.homepage", "moz-extension://0e55d502-cb00-4fc3-b66e-5f26a5fcaea6/index.html");
 
 // PREF: set NEWTAB page to blank tab
 // true=Firefox Home, false=blank page
